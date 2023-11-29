@@ -1,0 +1,23 @@
+<a href="#" class="action_btn">Get Started</a>
+
+.action_btn{
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
