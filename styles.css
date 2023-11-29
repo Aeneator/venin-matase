@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: url("/Resources/background_image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1rem;
+}
+a:hover{
+    color: brown;
+}
+/* Header */
+header{
+    position: relative;
+    padding: 0 2rem;
+    background-color:blueviolet;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color:chartreuse;
+}
+.navbar .logo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.navbar .navbar_links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: white;
+    font-size: 0rem;
+    cursor: pointer;  
+    display: none;
+}
+.navbar .toggle_btn .span{
+    width: 200px;
+}
+.action_btn{
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: none;
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* HERO*/
+
+section#hero{
+    height: calc(100vh - 60px);/*60px is the size of the navbar*/
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: aliceblue;
+}
+
+#hero h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px){
+    .navbar .navbar_links,
+    .navbar .action_btn{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rm;
+        width: unset;
+    }
+}
