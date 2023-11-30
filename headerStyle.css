@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #c7493a;
+    --accent-color: #c7493a;
+    --dark: #161616;
+    --light: white;
+    --normal-text: white;
+}
+/* Header */
+header{
+    position:fixed;
+    width: 100vw;
+    height: 100px;
+    background-color:var(--dark);
+}
+.header_bar{
+    height: 20%;
+    width: 100vw;
+    background-color:var(--primary-color);
+}
+.navbar{
+    height: 80%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.navbar .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width:fit-content;
+}
+.navbar .logo_text{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.navbar .logo_image{
+    height: 100%;
+    margin-right: 10px;
+}
+
+/* NAVBAR OPTIONS */
+.navbar .navbar_links{
+    display: flex;
+    gap: 2rem;
+}
+.navbar_link_option{
+    text-decoration: none;
+    color: var(--normal-text);
+    font-size: 1.5rem;
+}
+.navbar_link_option:hover{
+    color: var(--primary-color);
+}
+.navbar .toggle_btn{
+    color: var(--normal-text);
+    cursor: pointer;  
+    display: none;
+}
+.navbar .toggle_btn span{
+    font-size: 2.5rem;
+}
+.navbar .toggle_btn span:hover{
+    color: var(--primary-color);
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 120px;
+    height: 0px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1);
+    display: none;
+}
+.dropdown_menu.open{
+    height: auto;
+}
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE DESIGN */
+/* TABLET*/
+@media (max-width: 992px){
+    .navbar .navbar_links,
+    .navbar .action_btn{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+    .navbar .logo_text{
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+}
+
+@media(max-width: 340px){
+    .navbar .logo_text{
+        font-size: .9rem;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+}

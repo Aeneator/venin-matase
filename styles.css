@@ -8,10 +8,9 @@
 }
 :root {
     --primary-color: #c7493a;
-    --accent-color: red;
+    --accent-color: #c7493a;
     --dark: #161616;
     --light: white;
-
     --normal-text: white;
 }
 body{
@@ -21,146 +20,71 @@ body{
     background-size: cover;
     background-position: center;*/
 }
-
-/* Header */
-header{
-    position:fixed;
-    width: 100vw;
+.header_blank{
     height: 100px;
-    background-color:var(--dark);
-}
-.header_bar{
-    height: 20%;
     width: 100vw;
-    background-color:var(--primary-color);
-}
-.navbar{
-    height: 80%;
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-}
-
-/* LOGO */
-.navbar .logo{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width:fit-content;
-}
-.navbar .logo_text{
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-.navbar .logo_image{
-    height: 100%;
-    margin-right: 10px;
-}
-
-/* NAVBAR OPTIONS */
-.navbar .navbar_links{
-    display: flex;
-    gap: 2rem;
-}
-.navbar_link_option{
-    text-decoration: none;
-    color: var(--normal-text);
-    font-size: 1.5rem;
-}
-.navbar_link_option:hover{
-    color: var(--primary-color);
-}
-.navbar .toggle_btn{
-    color: var(--normal-text);
-    cursor: pointer;  
-    display: none;
-}
-.navbar .toggle_btn span{
-    font-size: 2.5rem;
-}
-.navbar .toggle_btn span:hover{
-    color: var(--primary-color);
-}
-
-/* DROPDOWN MENU */
-.dropdown_menu{
-    position: absolute;
-    right: 2rem;
-    top: 120px;
-    height: 0px;
-    width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1);
-    display: none;
-}
-.dropdown_menu.open{
-    height: auto;
-}
-.dropdown_menu li {
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.dropdown_menu .action_btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 /* HERO*/
-section#hero{
-    height: calc(100vh - 60px);/*60px is the size of the navbar*/
-    background-color: rgba(0,0,0,0.8);
+.hero{
+    height: 80vh;/*60px is the size of the navbar*/
+    width: 100vw;
+    background-image: url('Resources/background_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: aliceblue;
 }
-#hero h1{
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.overlay {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+.eye_container{
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+    margin-top: 5vw;
+}
+.eye_gif_left,.eye_gif_right{
+    width: 20vw;
+    min-width: 130px;
+    max-height: 90%;
+    margin: auto;
+    object-fit: contain;
+    transition: transform .7s ease-in-out;
+}
+.eye_gif_left:hover{
+    transform: rotate(10deg);
+}
+.eye_gif_right:hover{
+    transform: rotate(-10deg);
+}
+.hero_message{
+    padding: 2vh;
+    font-size: max(1.5rem,4vw);
+    font-weight: bold;
+    color: var(--light);
+    margin-inline: auto;
 }
 
 /* RESPONSIVE DESIGN */
-/* TABLET*/
 @media (max-width: 992px){
-    .navbar .navbar_links,
-    .navbar .action_btn{
-        display: none;
-    }
-    .navbar .toggle_btn{
-        display: block;
-    }
-    .dropdown_menu{
-        display: block;
-    }
+  
 }
 @media(max-width: 576px){
-    .dropdown_menu{
-        left: 2rem;
-        width: unset;
-    }
-    .navbar .logo_text{
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: var(--primary-color);
-    }
+  
 }
 
 @media(max-width: 340px){
-    .navbar .logo_text{
-        font-size: .9rem;
-        font-weight: bold;
-        color: var(--primary-color);
-    }
+  
 }
