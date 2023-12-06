@@ -1,18 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    box-sizing: border-box;
-}
-:root {
-    --primary-color: #c7493a;
-    --accent-color: #c7493a;
-    --dark: #161616;
-    --light: white;
-    --normal-text: white;
-}
 /* Header */
 header{
     position:fixed;

@@ -57,6 +57,7 @@ body{
     margin: auto;
     object-fit: contain;
     transition: transform .7s ease-in-out;
+    animation: fadeInAnimation ease 4s;
 }
 .eye_gif_left:hover{
     transform: rotate(10deg);
@@ -70,6 +71,7 @@ body{
     font-weight: bold;
     color: var(--light);
     margin-inline: auto;
+    animation: fadeInAnimation ease 4s;
 }
 /* Paragraph */
 .section_container{
@@ -85,28 +87,34 @@ body{
     background-color: var(--accent-color);
 }
 .title_text{
-    font-size: max(1.2rem,2vw);
+    font-size: max(1.3rem,2vw);
     color: var(--light);
 }
 .title_text:hover{
     animation: shake 0.5s;
 }
 .paragraph_text{
-    font-size: max(0.7rem,1.5vw);
+    font-size: max(0.9rem,1.5vw);
     color: var(--light);
 }
-.image_in_container{
-    width: 60%;  
-    padding: 5%;
+.left_image{
+    width: 40vw;  
+    padding-right: 5%;
     transition-duration: .2s;
 }
-.image_in_container:hover{
+.right_image{
+    width: 40vw;  
+    padding-left: 5%;
+    transition-duration: .2s;
+}
+.left_image:hover,.right_image:hover{
     transform: scale(.8);
 }
 .left_image_text_container,.right_image_text_container{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-block: 4vh;
     height: 100%
 }
 
@@ -119,26 +127,13 @@ body{
 @media(max-width: 480px){
 
     .left_image_text_container{
-        flex-direction: column;
-    }
-    .right_image_text_container{
         flex-direction: column-reverse;
     }
-    .image_in_container{
+    .right_image_text_container{
+        flex-direction: column;
+    }
+    .left_image,.right_image{
         width: 90%;
+        padding: 5%;
     }
 }
-
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
