@@ -124,7 +124,7 @@ body{
 
 }
 /*Phone*/
-@media(max-width: 480px){
+@media(max-width: 600px){
 
     .left_image_text_container{
         flex-direction: column-reverse;
