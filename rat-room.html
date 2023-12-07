@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Venin si matase</title>
+    <meta charset="=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="Resources/blood_eye_white.png" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="headerStyle.css" />
+    <link rel="stylesheet" type="text/css" href="reuseable_animations.css" />
+    <link rel="stylesheet" type="text/css" href="rat_room_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header_bar"></div>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="Resources/blood_eye_white.png" class="logo_image" />
+          <div class="logo_text">Venin și mătase</div>
+        </div>
+        <ul class="navbar_links">
+          <li><a class="navbar_link_option" href="index.html">Acasa</a></li>
+          <li>
+            <a class="navbar_link_option" href="rat-room.html">Senzatii</a>
+          </li>
+          <li><a class="navbar_link_option" href="services">Services</a></li>
+          <li><a class="navbar_link_option" href="contact">Contact </a></li>
+        </ul>
+        <div class="toggle_btn">
+          <span class="material-symbols-outlined"> menu </span>
+        </div>
+      </nav>
+      <div class="dropdown_menu">
+        <li><a class="navbar_link_option" href="index.html">Acasa</a></li>
+        <li><a class="navbar_link_option" href="rat-room.html">Senzatii</a></li>
+        <li><a class="navbar_link_option" href="services">Services</a></li>
+        <li><a class="navbar_link_option" href="contact">Contact</a></li>
+      </div>
+    </header>
+
+    <div class="header_blank"></div>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn span");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+        toggleBtnIcon.textContent = isOpen ? "close" : "menu";
+      };
+    </script>
+
+    <div class="rat_section">
+      <h1 class="rat_main_text">Esti fix unde trebuie sa te aflii</h1>
+      <img class="moving_image" src="Resources/Rats/rat-walk-1.gif" />
+      <img class="moving_image" src="Resources/Rats/rat-walk-2.gif" />
+      <img class="moving_image" src="Resources/Rats/rat-walk-1.gif" />
+      <img class="moving_image" src="Resources/Rats/rat-walk-2.gif" />
+    </div>
+  </body>
+</html>

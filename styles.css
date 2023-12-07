@@ -15,7 +15,7 @@
 }
 body{
     width: 100%;
-    height: 1000px;
+    height: 100%;
     background-color: var(--dark);
     /*background-image: url('/Resources/background_image.jpg');
     background-size: cover;
