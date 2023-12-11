@@ -1,35 +1,41 @@
 .rat_section{
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-inline: auto;
-    background-color: red;
-    align-items: center;
-    justify-content: center;
+  width: 90%;
+  height: 100%;
+  margin-inline: auto;
+  background-image: url('Resources/Rats/rat-cute.jpg');
+  background-size: auto;
+  background-position: center;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .rat_main_text{
-    font-size: max(1.5rem,4vw);
-    font-weight: bold;
-    color: var(--light);
-    animation: fadeInAnimation ease 4s;
+  font-size: max(1.5rem,4vw);
+  font-weight: bold;
+  color: var(--light);
+  animation: fadeInAnimation ease 4s;
 }
 .left_right_moving_image {
-    width: 20%;
-    position: relative;
-    animation: left_right_move_animation 5s linear infinite;
+  width: 20%;
+  animation: left_right_move_animation 5s linear infinite;
 }
-
 .square_patrol_moving_image_interior{
-    width: 10%;
-    position: relative;
-    animation: square_move_animation_interior 10s linear infinite;
+  width: 10%;
+  animation: square_move_animation_interior 10s linear infinite;
 }
 .square_patrol_moving_image_exterior{
   width: 10%;
-  position: relative;
   animation: square_move_animation_exterior 10s linear infinite;
+}
+.rat_center_piece{
+  width: 20%;
 }
 
 @keyframes left_right_move_animation {
